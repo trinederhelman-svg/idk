@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Private Demo Games – iOS 18 Glass</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --accent: #0a84ff;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+header {
+    backdrop-filter: blur(25px);
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 30px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.game {
+    backdrop-filter: blur(20px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.game p {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-top: 8px;
+}
+
+.download {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: rgba(10,132,255,0.25);
+    border: 1px solid rgba(10,132,255,0.6);
+    color: white;
+    border-radius: 999px;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.15s ease, background 0.3s ease;
+}
+
+.download:active {
+    transform: scale(0.94);
+}
+
+.download::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.download.loading::after {
+    opacity: 1;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎮 Private Demo Games</h1>
+    <p>iOS 18 Glass Theme · Demo Versions Only</p>
+</header>
+
+<div class="container">
+
+<!-- 20 Demo Games -->
+<div class="game">
+    <div class="game-header">
+        <h2>Neon Drift (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>2 futuristic tracks</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Shadow Ops (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Stealth mission demo</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Sky Islands (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>3 floating islands</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Cyber Arena (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>1v1 combat mode</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Horror Signal (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>20-minute story demo</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Pixel Quest (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>First dungeon only</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Velocity X (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>High-speed racing demo</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Mech Protocol (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Training missions</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Frozen Depths (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Ice cave survival</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Nova Strike (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Wave-based combat</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Dark Escape (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Single escape level</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Solar Frontier (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Space exploration</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Glitch Runner (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Endless mode only</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Myth Realms (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Starter zone access</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Neural Hack (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Puzzle mission demo</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Void Horror (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>15-minute experience</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Urban Racer (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Night city track</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Alien Echo (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>First contact mission</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Glass Tactics (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Turn-based battle</p>
+</div>
+
+<div class="game">
+    <div class="game-header">
+        <h2>Afterlight (Demo)</h2>
+        <button class="download">Download</button>
+    </div>
+    <p>Story introduction</p>
+</div>
+
+</div>
+
+<footer>
+    © 2026 Private Glass Demo Hub · iOS 18 Style
+</footer>
+
+<script>
+document.querySelectorAll(".download").forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.classList.contains("loading")) return;
+
+        const originalText = button.innerHTML;
+        button.classList.add("loading");
+        button.innerHTML = '<div class="spinner"></div>';
+
+        setTimeout(() => {
+            button.classList.remove("loading");
+            button.innerHTML = "✓ Downloaded";
+
+            setTimeout(() => {
+                button.innerHTML = originalText;
+            }, 2000);
+        }, 1800);
+    });
+});
+</script>
+
+</body>
+</html>
